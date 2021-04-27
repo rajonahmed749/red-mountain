@@ -1,10 +1,12 @@
 import React from 'react';
-import Navbar from '../../Shared/Navbar/Navbar';
+import MenuBar from '../../Shared/MenuBar/MenuBar';
+import HeaderMain from '../HeaderMain/HeaderMain';
 
 const Headers = () => {
     return (
         <div>
-            <Navbar></Navbar>
+            <MenuBar></MenuBar>
+            <HeaderMain></HeaderMain>
         </div>
     );
 };
