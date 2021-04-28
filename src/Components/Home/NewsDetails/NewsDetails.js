@@ -10,10 +10,8 @@ const NewsDetails = ({news}) => {
                     <Card.Img variant="top" src={news.picture} />
                     <Card.Body>
                         <Card.Title>{news.headline}</Card.Title>
-                        <small className="text-primary">{news.time}</small>
-                        <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk of
-                        the card's content.
+                        <Card.Subtitle className="mb-2 text-muted">{news.time}</Card.Subtitle>
+                        <Card.Text> Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ullam voluptatem rem facere dolor ea fugit deserunt velit.
                         </Card.Text>
                          <Button variant="primary" onClick={() => setShow(true)}>
                             Read more
@@ -26,11 +24,11 @@ const NewsDetails = ({news}) => {
                         >
                             <Modal.Header closeButton>
                             <Modal.Title id="example-custom-modal-styling-title">
-                                Custom Modal Styling
-                            </Modal.Title>
+                                 {news.headline}
+                             </Modal.Title>
                             </Modal.Header>
-                            <Modal.Body>
-                            <p>
+                            <Modal.Body >
+                            <p >
                                 Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde
                                 commodi aspernatur enim, consectetur. Cumque deleniti temporibus
                                 ipsam atque a dolores quisquam quisquam adipisci possimus
