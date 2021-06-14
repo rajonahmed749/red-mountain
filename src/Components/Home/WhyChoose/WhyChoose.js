@@ -21,11 +21,11 @@ const WhyChoose = () => {
             details: "Children are comfortable and confident in their home, <br/> feeling safe and secure to explore and learn."
         },
         {
-            title: "Home-like Environment",
+            title: "Perspective Religious  Learning",
             details: "Children are comfortable and confident in their home, <br/> feeling safe and secure to explore and learn."
         },
         {
-            title: "Home-like Environment",
+            title: "Friendly Mentors ",
             details: "Children are comfortable and confident in their home, <br/> feeling safe and secure to explore and learn."
         }
     ]
@@ -33,14 +33,13 @@ const WhyChoose = () => {
         <div className={styles.chooseCard}>
             <div className="text-center mt-5 p-2">
                 <h5><i>Read on to understand our difference</i></h5>
-                <h2>Why Choose Red Mountain Kindergarden</h2>
+                <h2>Why Choose Red Mountain Kindergarden?</h2>
             </div>
-            <div className="row mt-5 text-center justify-content-evenly">
+            <div className="mt-3 row text-center justify-content-center">
                {
                    reasons.map(reason=><WhyChooseDetails reason={reason}></WhyChooseDetails> )
                }
-            </div>
-            
+            </div>            
         </div>
     );
 };

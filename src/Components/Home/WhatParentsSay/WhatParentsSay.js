@@ -2,34 +2,39 @@ import React from 'react';
 import picture_1 from "../../../images/parents-1.svg"
 import picture_2 from "../../../images/parents-2.svg"
 import picture_3 from "../../../images/parents-3.svg"
+import ParentsDetails from './ParentsDetails';
 
 const WhatParentsSay = () => {
+
+    const saidData = [
+        {
+            parents: "Ms Puspo Akther",
+            date: "12 April, 2020",
+            photo: picture_1
+        },
+        {
+            parents: "Mr. Rabinson Forth",
+            date: "4 April, 2021",
+            photo: picture_2
+        },
+        {
+            parents: "Ms Fatema begum",
+            date: "15 June, 2021",
+            photo: picture_3
+        }
+    ]
+
+
     return (
         <div>
             <div className="mt-5 text-center ">
                 <h2>What Parents Say !</h2>
             </div>
             <div className="row mt-5 text-center justify-content-center">
-                <div className="col-md-4 w-75 col-sm-12">
-                    <img src={picture_1} alt="pictures"/>
-                    <h5>Mr. Rabinson</h5>
-                    <small> 4 April, 2021</small>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, dolorum assumenda cum libero quaerat debitis! Dolor blanditiis ab omnis veniam.</p>
-                </div>
-                <div className="col-md-4 w-75 col-sm-12">
-                    <img src={picture_2} alt="pictures"/>
-                    <h5>Ms Fatema begum</h5>
-                    <small> 4 April, 2021</small>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, dolorum assumenda cum libero quaerat debitis! Dolor blanditiis ab omnis veniam.</p>
-                </div>
-                <div className="col-md-4 w-75 col-sm-12">
-                    <img src={picture_3} alt="pictures"/>
-                    <h5>Ms Puspo Akther</h5>
-                    <small> 4 April, 2021</small>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, dolorum assumenda cum libero quaerat debitis! Dolor blanditiis ab omnis veniam.</p>
-                </div>
-            </div>
-            
+                {
+                   saidData.map(say => <ParentsDetails say={say}></ParentsDetails> ) 
+                }               
+            </div>            
         </div>
     );
 };

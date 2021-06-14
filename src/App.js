@@ -7,6 +7,7 @@ import {
   Route} from "react-router-dom";
 import About from './Components/Home/About/About';
 import NoFound from './Components/Shared/NoFound/NoFound';
+import Login from './Components/Shared/Login/Login';
 
 function App() {
   return (
@@ -16,10 +17,13 @@ function App() {
             <Home />
           </Route>
           <Route path="/about">
-            <About></About>
+            <About/>
+          </Route>
+          <Route path="/login">
+            <Login/>
           </Route>
           <Route path="*">
-            <NoFound></NoFound>
+            <NoFound/>
           </Route>
         </Switch>
     </Router>

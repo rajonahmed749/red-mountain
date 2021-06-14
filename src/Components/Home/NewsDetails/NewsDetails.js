@@ -13,7 +13,7 @@ const NewsDetails = ({news}) => {
                         <Card.Subtitle className="mb-2 text-muted">{news.time}</Card.Subtitle>
                         <Card.Text> Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ullam voluptatem rem facere dolor ea fugit deserunt velit.
                         </Card.Text>
-                         <Button variant="primary" onClick={() => setShow(true)}>
+                         <Button variant="success" onClick={() => setShow(true)}>
                             Read more
                         </Button>
                         <Modal
@@ -40,6 +40,7 @@ const NewsDetails = ({news}) => {
                                 laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod
                                 accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia
                                 reiciendis porro quo magni incidunt dolore amet atque facilis ipsum
+                                deleniti rem!accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum
                                 deleniti rem!
                             </p>
                             </Modal.Body>
@@ -47,7 +48,6 @@ const NewsDetails = ({news}) => {
                     </Card.Body>
                 </Card>
             </div>
-            
         </div>
     );
 };

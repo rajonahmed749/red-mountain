@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import NewsDetails from '../NewsDetails/NewsDetails';
 import newsPic from "../../../images/new 1.jpg"
 import newsPic2 from "../../../images/news -2.jpg"
 import newsPic3 from "../../../images/new 3.jpg"
 
 const News = () => {
-    const [show, setShow] = useState(false);
     const newHeadline =[
         {
             headline: "The Preschool Prepartaion",
@@ -27,9 +26,9 @@ const News = () => {
     return (
         <div>
             <div className="row text-center mt-5 justify-content-center">
-                    {
-                        newHeadline.map(news => <NewsDetails news={news}></NewsDetails> )
-                    }
+                {
+                    newHeadline.map(news => <NewsDetails news={news}></NewsDetails> )
+                }
             </div>
         </div>
     );
