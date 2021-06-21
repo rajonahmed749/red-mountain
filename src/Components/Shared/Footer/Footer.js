@@ -16,9 +16,9 @@ const Footer = () => {
                     <small>Developer</small> <br/>
                     <a href="https://ahmed-rajon.web.app/" target="_blank" rel="noreferrer"> &reg;ajon</a>
                 </div>
-                <div className="col-md-3 col-sm-12 mt-2">
-                    <p><FontAwesomeIcon icon={faPhoneVolume} size="1x"/> 01775655564</p>
-                    <p> <FontAwesomeIcon icon={faAt} size="1x"/> rajon26@student.sust.edu</p>
+                <div className="col-md-3 col-sm-12 mt-4">
+                <FontAwesomeIcon icon={faPhoneVolume} size="1x"/> <small>01775655564</small> <br/>
+                    <FontAwesomeIcon icon={faAt} size="1x"/><small>  rajon26@student.sust.edu</small>
                 </div>
             </div>       
         </div>

@@ -11,13 +11,14 @@ const MenuBar = () => {
         <div>
             <Navbar bg="light" expand="lg">
                 <Navbar.Brand >
-                    <img className={styles.img} src={logo} alt="site logo"/>
+                  <Link to="/"><img className={styles.img} src={logo} alt="site logo"/></Link>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto">
                     <Nav.Link onClick={()=>history.push("/")}>Home</Nav.Link>
-                     <Nav.Link onClick={()=>history.push("/about")}>About us</Nav.Link>
+                    <Nav.Link onClick={()=>history.push("/about")}>About us</Nav.Link>
+                    <Nav.Link onClick={()=>history.push("/admin")}>Admin</Nav.Link>
                     
                     <NavDropdown title="Contacts" id="basic-nav-dropdown">
                         <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
@@ -26,10 +27,8 @@ const MenuBar = () => {
                         <NavDropdown.Divider />
                         <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
                     </NavDropdown>
+                    <Nav.Link onClick={()=>history.push("/login")}>login</Nav.Link>
                     </Nav>
-                    <Form inline>
-                    <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                    </Form>
                 </Navbar.Collapse>
             </Navbar>
         </div>
