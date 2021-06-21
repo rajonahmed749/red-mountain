@@ -1,5 +1,12 @@
 import React from 'react';
 import MenuBar from '../Shared/MenuBar/MenuBar';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route} from "react-router-dom";
+import AddService from './AddService';
+import Sidebar from './Sidebar';
+import OrdersList from './OrdersList';
 
 const Admin = () => {
     return (
@@ -7,7 +14,20 @@ const Admin = () => {
             <div>
                 <MenuBar/>
             </div>
-            
+            <div>
+            <Router>
+                <Sidebar/>
+                <Switch>                    
+                    <Route path="/admin/addservice">
+                    <AddService/>
+                    </Route>
+                    <Route path="/admin/orderlist">
+                    <OrdersList/>
+                    </Route>
+                    
+                </Switch>
+            </Router>
+            </div>            
         </div>
     );
 };
