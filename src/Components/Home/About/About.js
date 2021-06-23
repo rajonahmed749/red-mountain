@@ -7,8 +7,8 @@ const About = () => {
             <div>
               <MenuBar></MenuBar>
             </div>
-            <div>
-                <h2>This is about page</h2>
+            <div className="mt-5 text-center">
+                <h2>This page is comming soon</h2>
             </div>
             
             

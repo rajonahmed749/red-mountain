@@ -5,16 +5,18 @@ import Headers from '../Headers/Headers';
 import News from '../News/News';
 import WhatParentsSay from '../WhatParentsSay/WhatParentsSay';
 import WhyChoose from '../WhyChoose/WhyChoose';
+import Services from '../Services/Services';
 
 const Home = () => {
     return (
         <div>
-            <Headers></Headers>
-            <Comitment></Comitment>
-            <News></News>
-            <WhyChoose></WhyChoose>
-            <WhatParentsSay></WhatParentsSay>
-            <Footer></Footer>
+            <Headers/>
+            <Comitment/>
+            <Services/>
+            <News/>
+            <WhyChoose/>
+            <WhatParentsSay/>
+            <Footer/>
         </div>
     );
 };

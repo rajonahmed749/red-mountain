@@ -19,14 +19,6 @@ const MenuBar = () => {
                     <Nav.Link onClick={()=>history.push("/")}>Home</Nav.Link>
                     <Nav.Link onClick={()=>history.push("/about")}>About us</Nav.Link>
                     <Nav.Link onClick={()=>history.push("/admin")}>Admin</Nav.Link>
-                    
-                    <NavDropdown title="Contacts" id="basic-nav-dropdown">
-                        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                        <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                    </NavDropdown>
                     <Nav.Link onClick={()=>history.push("/login")}>login</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
