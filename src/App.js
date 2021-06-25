@@ -6,9 +6,12 @@ import {
   Switch,
   Route} from "react-router-dom";
 import About from './Components/Home/About/About';
+import Checkout from './Components/Home/Checkout/Checkout';
+import Orders from './Components/Home/Orders/Orders';
 import NoFound from './Components/Shared/NoFound/NoFound';
 import Login from './Components/Shared/Login/Login';
 import Admin from './Components/Admin/Admin';
+import PrivateRoute from './Components/Home/PrivateRoute/PrivateRoute';
 import { createContext, useState } from 'react';
 export const UserContext = createContext() 
 function App() {
@@ -23,6 +26,12 @@ function App() {
             </Route>
             <Route path="/about">
               <About/>
+            </Route>
+            <PrivateRoute path="/checkout/:id">
+              <Checkout/>
+            </PrivateRoute>
+            <Route path="/orders">
+              <Orders/>
             </Route>
             <Route path="/login">
               <Login/>
