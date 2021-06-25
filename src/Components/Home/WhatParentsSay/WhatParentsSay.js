@@ -22,8 +22,7 @@ const WhatParentsSay = () => {
             date: "15 June, 2021",
             photo: picture_3
         }
-    ]
-
+    ];
 
     return (
         <div>
@@ -32,9 +31,9 @@ const WhatParentsSay = () => {
             </div>
             <div className="row mt-5 text-center justify-content-center">
                 {
-                   saidData.map(say => <ParentsDetails say={say}></ParentsDetails> ) 
-                }               
-            </div>            
+                    saidData.map(say => <ParentsDetails say={say}></ParentsDetails>)
+                }
+            </div>
         </div>
     );
 };

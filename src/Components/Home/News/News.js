@@ -5,16 +5,16 @@ import newsPic2 from "../../../images/news -2.jpg"
 import newsPic3 from "../../../images/new 3.jpg"
 
 const News = () => {
-    const newHeadline =[
+    const newHeadline = [
         {
             headline: "The Preschool Prepartaion",
-            time: new Date().toDateString(),
+            time: "Fri Jun 25 2021",
             picture: newsPic
 
         },
         {
             headline: "Dual Language Learner",
-            time: new Date().toDateString(),
+            time: "Sun Apr 14 2021",
             picture: newsPic2
         },
         {
@@ -24,12 +24,10 @@ const News = () => {
         }
     ]
     return (
-        <div>
-            <div className="row text-center mt-5 justify-content-center">
-                {
-                    newHeadline.map(news => <NewsDetails news={news}></NewsDetails> )
-                }
-            </div>
+        <div className="row text-center mt-5 justify-content-center">
+            {
+                newHeadline.map(news => <NewsDetails news={news}></NewsDetails>)
+            }
         </div>
     );
 };

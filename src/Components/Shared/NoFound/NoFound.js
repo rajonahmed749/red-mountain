@@ -16,7 +16,7 @@ const NoFound = () => {
                 <div  className="mt-5 text-center">
                     <h4> 404! Page not Found</h4>
                     <p>Please try to search relevant topic</p>
-                    <button className=" btn btn-primary" onClick={handleBack}>back Home</button>
+                    <button className=" btn btn-primary" onClick={handleBack}>Back Home</button>
                 </div>
             </div>
             

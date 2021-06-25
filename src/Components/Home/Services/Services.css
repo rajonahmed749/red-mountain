@@ -1,6 +1,4 @@
-.service{
-    /* width: 500px;
-    height: 550px; */
+.service {
     border: 1px solid gray;
     border-radius: 14px;
     text-align: center;
@@ -8,14 +6,9 @@
     padding: 20px;
     overflow: hidden;
 }
-/* .service button{
-    margin-top: 20px;
-    border: none;
-    border-radius: 15px;
-    background: rgb(106, 194, 216);
-    color: white
-} */
-.IMG{
+
+.IMG {
     width: 100%;
     height: 150px;
+    border-radius: 150px 160px 30px 10px
 }

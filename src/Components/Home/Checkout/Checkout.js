@@ -7,6 +7,17 @@ import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 const Checkout = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [service, setService] = useState({});
+    
+    const addedService = {
+        service: service.service,
+        price: service.price,
+        description: service.description,
+        imageURL: service.imageURL,
+        user: service.user 
+    }
+
+    console.log("this would be added", addedService)
+
     const {id} = useParams();
 
     fetch(`http://localhost:4000/service/${id}`)
@@ -21,7 +32,7 @@ const Checkout = () => {
         fetch(`http://localhost:4000/addOrder`,{
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(service)
+            body: JSON.stringify(addedService)
             })
             .then(res => res.json())
             history.push('/orders')

@@ -8,13 +8,9 @@ const Orders = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     const [orders, setOrders] = useState([])
-
+    const id = loggedInUser.email;
     useEffect(() => {
-        fetch('http://localhost:4000/getOrders', {
-            method: 'POST',
-            headers: { 'content-type': 'application/json' },
-            body: JSON.stringify({ email: loggedInUser.email})
-        })
+        fetch(`http://localhost:4000/getOrders/${id}`)
             .then(res => res.json())
             .then(data => setOrders(data));
     }, [])
@@ -44,8 +40,8 @@ const Orders = () => {
                         return (
                         <tr key={info._id}>
                             <td> <img src={info.imageURL} alt="books" style={{ width: "50px", height: "70px" }} /> </td>
-                            <td>{info.bookName}</td>
-                            <td>{info.authorName}</td>
+                            <td>{info.service}</td>
+                            <td>{info.description}</td>
                             <td>${info.price}</td>
                         </tr>
                         )
