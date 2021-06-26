@@ -1,5 +1,5 @@
 .service {
-    border: 1px solid gray;
+    border: none;
     border-radius: 14px;
     text-align: center;
     margin: 10px;
@@ -11,4 +11,8 @@
     width: 100%;
     height: 150px;
     border-radius: 150px 160px 30px 10px
+}
+
+.IMG:hover{
+    border-radius: 100px 100px 10px 10px
 }

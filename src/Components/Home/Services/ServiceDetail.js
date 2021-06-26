@@ -9,13 +9,19 @@ const Books = ({service}) => {
     const handleOrder = (id) =>{
           history.push(`/checkout/${id}`);
     }
+
+    const text = service.description;
+    let count = 60;
+    let result = text.slice(0, count) + (text.length > count ? "..." : "");
+
     return (
         <div className="col-md-3">
             <div className="service shadow">
-                <img className="IMG"  src={service.imageURL} alt="books"/>
-                {/* <h4>Author: {book.authorName}</h4>  */}
-                <h5>Price: ${service.price}</h5> 
-                <button className="btn btn-success" onClick={()=>handleOrder(service._id)}>Buy Now</button>  
+                <img className="IMG mb-2"  src={service.imageURL} alt="books"/>
+                <h5 className="fst-italic">Section: {service.service}</h5> 
+                <p>{result}</p> 
+                <h6>Package cost: ${service.price}</h6> 
+                <button className="btn btn-success mt-1" onClick={()=>handleOrder(service._id)}>Buy Now</button>  
             </div>
         </div>
     );
