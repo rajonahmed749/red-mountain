@@ -4,7 +4,7 @@ import { UserContext } from '../../../App';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import MenuBar from '../../Shared/MenuBar/MenuBar';
-import {Card,ListGroup,ListGroupItem,Button} from 'react-bootstrap';
+import { Card, ListGroup, ListGroupItem, Button } from 'react-bootstrap';
 
 const Checkout = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
@@ -15,23 +15,27 @@ const Checkout = () => {
         price: service.price,
         description: service.description,
         imageURL: service.imageURL,
-        user: service.user
+        user: service.user,
+        userName: service.userName
     }
 
     console.log("this would be added", addedService)
 
     const { id } = useParams();
 
-    fetch(`http://localhost:4000/service/${id}`)
+    fetch(`https://evening-ravine-30045.herokuapp.com/service/${id}`)
         .then(res => res.json())
         .then(data => setService(data))
 
     const history = useHistory()
     service.user = loggedInUser.email;
+    service.userName = loggedInUser.name;
+
+
 
     //order service
     const handleOrder = () => {
-        fetch(`http://localhost:4000/addOrder`, {
+        fetch(`https://evening-ravine-30045.herokuapp.com/addOrder`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(addedService)
@@ -51,18 +55,17 @@ const Checkout = () => {
             </div>
             <Card style={{ width: '18rem' }} className="mx-auto my-2 shadow rounded">
                 <Card.Img className="IMG" variant="top" src={service.imageURL} />
-                <Card.Body>                    
+                <Card.Body>
                     <Card.Text>{service.description}</Card.Text>
                     <Card.Title>Section: {service.service}</Card.Title>
                 </Card.Body>
-
                 <ListGroup className="list-group-flush">
                     <ListGroupItem> Package Cost: ${service.price}</ListGroupItem>
                 </ListGroup>
                 <Card.Body>
                     <Button onClick={handleOrder} variant="warning"> <FontAwesomeIcon icon={faCheck} />Confirm Order</Button>
                 </Card.Body>
-                </Card>
+            </Card>
         </div>
     );
 };

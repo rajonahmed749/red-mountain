@@ -2,17 +2,17 @@ import React, { useState } from 'react';
 
 const OrdersList = () => {
 
-    const [allService, setAllService] = useState([])
+    const [allOrder, setAllOrder] = useState([])
 
-    fetch('http://localhost:4000/allServices')
-    .then(res => res.json())
-    .then(data => setAllService("all services",data))
+    // fetch('https://evening-ravine-30045.herokuapp.com/allOrders')
+    // .then(res => res.json())
+    // .then(data => setAllOrder("all services",data))
 
-    console.log(allService)
+    // console.log(allOrder)
 
     return (
         <div>
-            <h4>This is order list of {allService.length}</h4>
+            <h4>This is order list of {allOrder.length}</h4>
         </div>
     );
 };

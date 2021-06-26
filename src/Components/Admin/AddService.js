@@ -23,7 +23,7 @@ const AddService = () => {
         }
         setServices(serviceData)
         // const { bookName, authorName, price } = data;
-        const url = `http://localhost:4000/addService`;
+        const url = `https://evening-ravine-30045.herokuapp.com/addService`;
 
         fetch(url, {
             method: 'POST',

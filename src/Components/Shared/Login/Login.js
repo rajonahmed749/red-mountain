@@ -30,7 +30,6 @@ const Login = () => {
                  const signedInUser = { name: displayName, email, img: photoURL }
                  setLoggedInUser(signedInUser)
                  history.replace(from);
-                console.log(signedInUser);
             }).catch((error) => {
                 var errorCode = error.code;
                 var errorMessage = error.message;

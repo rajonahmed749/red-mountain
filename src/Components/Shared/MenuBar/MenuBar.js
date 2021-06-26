@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from 'react-router-dom';
 import logo from "../../../images/site-logo.jpg";
 import { useHistory } from "react-router-dom";
 import styles from "./MenuBar.module.css"
+import { UserContext } from '../../../App';
 
 const MenuBar = () => {
     let history = useHistory();
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     return (
         <Navbar bg="light" expand="lg">
             <Navbar.Brand >
@@ -19,7 +21,7 @@ const MenuBar = () => {
                     <Nav.Link onClick={() => history.push("/about")}>About us</Nav.Link>
                     <Nav.Link onClick={() => history.push("/admin")}>Admin</Nav.Link>
                     <Nav.Link onClick={() => history.push("/login")}>login</Nav.Link>
-                    <Nav.Link onClick={() => history.push("/contact")}>Contact Us</Nav.Link>
+                    <Nav.Link onClick={() => history.push("/orders")}> Order</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
