@@ -9,7 +9,7 @@ const Sidebar = () => {
         <div className="row justify-content-center marginAuto">
             <div className="col-md-4">
                 <Button variant="light">
-                    <Link to="/admin">  Admin Dashboard </Link>
+                    <Link to="/admin/notice">  Admin Dashboard </Link>
                 </Button>
                 <Button variant="light">
                     <Link to="/admin/addservice"> <FontAwesomeIcon icon={faPlusSquare} />  Add Service </Link>
