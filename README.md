@@ -19,4 +19,4 @@
 
 ### `Live Site`
 
-Click > [https://red-mountain-kids.web.app/](https://red-mountain-kids.web.app/) to view the live site.
+    [https://red-mountain-kids.web.app/](https://red-mountain-kids.web.app/)
