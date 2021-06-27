@@ -15,7 +15,7 @@
     iv. Couple of NPM packages
 
 
-[`https://github.com/rajonahmed749/red-mountain-server`]
+https://github.com/rajonahmed749/red-mountain-server
 
 
 ### `Live Site`
