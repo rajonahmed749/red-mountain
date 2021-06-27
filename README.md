@@ -1,6 +1,4 @@
 # RED MOUNTAIN KIDS
-<br>
-<br>
 
 ### This is a Kids school website based on MERN technology. In this project, Those technologies and tools are used given below,
 
@@ -19,4 +17,10 @@
 
 ### `Live Site`
 
-    [https://red-mountain-kids.web.app/](https://red-mountain-kids.web.app/)
+    https://red-mountain-kids.web.app/
+
+
+
+
+
+<!-- [https://red-mountain-kids.web.app/](https://red-mountain-kids.web.app/) -->
